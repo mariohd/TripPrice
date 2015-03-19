@@ -1,0 +1,124 @@
+{
+    "dates": {
+        "inicio": 1426388400000,
+        "fim": 1426993200000
+    },
+    "categories": [
+        "Passagens",
+        "Alimentação"
+    ],
+    "costs": [
+        {
+            "date": "19/03/2015",
+            "place": "Fortaleza",
+            "category": "Passagens",
+            "value": "1000.20",
+            "payment": "Credit Card"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "100.60",
+            "payment": "Credit Card"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        },
+        {
+            "date": "25/03/2015",
+            "place": "Fortaleza",
+            "category": "Alimentação",
+            "value": "20.99",
+            "payment": "Cash"
+        }
+    ]
+}

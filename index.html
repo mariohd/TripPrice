@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Trip Price</title>
+		<meta name="description" content="Responsive Animated Border Menus with CSS Transitions" />
+		<meta name="keywords" content="navigation, menu, responsive, border, overlay, css transition" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/icomoon.css" />
+		<link rel="stylesheet" type="text/css" href="css/tripPrice.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css" />
+
+		<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/tripPrice.js"></script>
+		<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easyTable.min.js"></script>
+		<script type="text/javascript" src="js/jqplot.pieRenderer.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>Trip Price <span>How much did i spent?</h1>
+			</header>
+
+			<section id="firstMenu">
+				<div class="center">
+					<span id="newTrip" class="buttonLike icon icon-plus bigger" > New Trip </span>
+					<span id="existingTrip" class="buttonLike icon icon-folder-upload bigger" ><input type="file" id="fileChooser" style="opacity: 0; position: absolute; width: 25%; left: 37.5%; cursor: pointer;"/>Existing Trip</span>
+				</div>
+			</section>
+			<section id="loadedTravel" style="display: none;">
+				<div style="overflow-y: scroll; height: 18em;">
+					<table id="costsTable" class="tripPrice">
+						<thead>
+							<th>Date</th>
+							<th>Local</th>
+							<th>Category</th>
+							<th>Payment</th>
+							<th style="text-align: right;">Value</th>
+							<th style="text-align: right;"></th>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<hr >
+				<div id="categoriesChart"></div>
+				<div id="resultsOfCosts">
+					<table class="category">
+					</table>
+				</div>
+			</section>
+			<nav id="bt-menu" class="bt-menu" style="display: none;">
+				<a href="#" id="bt-menu-trigger" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul>
+					<li>
+						<a id="categories" href="#" class="bt-icon">Categories</a>
+						<div id="categoriesList" class="hide" title="Categories">
+							<div class="new">
+								<span>Name:</span>
+								<input class="full" type="text" id="newCategorieName">
+								<span style="width: 10%" id="addNewCategorie" class="inline buttonLike icon icon-plus" > Add </span>
+							</div>
+							<div class="existing">
+								<table class="tripPrice">
+									<thead>
+										<th>Name</th>
+									</thead>
+									<tbody id="categoriesTableBody">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a id="costs" href="#" class="bt-icon">Costs</a>
+						<div id="addCosts" title="Costs" class="hide">
+							<table class="fullLine">
+								<tr>
+									<td><span>Date: </span></td>
+									<td><input class="fullLine date" type="text" id="dateCosts"></td>
+									<td><span>Value: </span></td>
+									<td><input class="fullLine" type="number" id="valueOfCosts"></td>
+								</tr>
+								<tr>
+									<td><span>Place: </span></td>
+									<td colspan="3"><input class="fullLine" type="text" id="placeOfCosts"></td>
+								</tr>
+								<tr>
+									<td><span>Categorie: </span></td>
+									<td colspan="3"><select class="fullLine" id="categoriesOfCosts"></select></td>
+								</tr>
+								<tr>
+									<td><span>Payment: </span></td>
+									<td colspan="3">
+										<select class="fullLine" id="paymentOfCosts">
+											<option value="Credit Card">Credit Card </option>
+											<option value="Cash">Cash </option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4"><span id="addNewCost" class="fullLine inline buttonLike icon icon-plus" > Add </span></td>
+								</tr>
+							</table>
+
+						</div>
+					</li>
+					<li>
+						<a href="#" id="tripConfigIcon" class="bt-icon">Trip</a>
+						<div id="tripConfig" title="Trip" class="hide">
+							<table class="fullLine">
+								<tr>
+									<td><span>Begin: </span></td>
+									<td><input class="fullLine date" type="text" id="tripBegin"></td>
+									<td><span>End: </span></td>
+									<td><input class="fullLine date" type="text" id="tripEnd"></td>
+								</tr>
+								<tr>
+									<td><span>City: </span></td>
+									<td colspan="3"><input class="fullLine" type="text" id="tripCity"></td>
+								</tr>
+								<tr>
+									<td><span>Country: </span></td>
+									<td colspan="3"><input class="fullLine" id="tripCountry"></input></td>
+								</tr>
+								<tr>
+									<td colspan="4"><span id="saveTripConfig" class="fullLine inline buttonLike icon icon-floppy-disk" > Save </span></td>
+								</tr>
+							</table>
+						</div>
+					</li>
+					<li><a id="saveTrip" href="#" class="bt-icon">Save</a></li>
+				</ul>
+			</nav>
+		</div><!-- /container -->
+	</body>
+	<script src="js/classie.js"></script>
+	<script src="js/borderMenu.js"></script>
+</html>

@@ -1,0 +1,122 @@
+input, select {
+	height: 38px;
+	border-radius: 8px;
+}
+
+table th:last-child {
+	border-top-right-radius: 10px;
+}
+
+table th:first-child  {
+	border-top-left-radius: 10px;
+}
+
+table > tbody > tr:last-child > td:first-child {
+	border-bottom-left-radius: 10px;
+}
+
+table > tbody > tr:last-child > td:last-child {
+	border-bottom-right-radius: 10px;
+}
+
+#costsTable {
+	width: 100%;
+	float: left;
+}
+
+#categoriesChart {
+	width: 600px;
+	float: left;
+	height: 400px;
+}
+
+.buttonLike {
+	border: solid 2px #7C8D87;
+	border-radius: 7px;
+	text-align: center;
+	cursor: pointer;
+	display: inherit;
+	margin: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.buttonLike:hover {
+	background-color: rgba(129,208,177,.3);
+}
+
+.center {
+	width: 30%;
+  margin: 5% auto;
+}
+
+.hide {
+	display: none;
+}
+
+.full {
+	width: 80%;
+}
+
+.half {
+	width: 50%;
+}
+
+.quarter {
+	width: 28%;
+}
+
+.new {
+	padding-bottom: 15px;
+}
+
+.fullLine {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.jqplot-title {
+	width: auto !important;
+	position: initial !important;
+}
+
+hr {
+	width: 100%;
+}
+#resultsOfCosts {
+	width: 30%;
+	margin-bottom: 50px;
+	float: right;
+}
+#resultsOfCosts > table {
+	font-size: 22px;
+	float: right;
+}
+#resultsOfCosts > table td:first-child {
+	padding-right: 20px;
+	text-align: right;
+}
+
+#resultsOfCosts > table td:first-child::after {
+	content: ' :'
+}
+
+#resultsOfCosts .total {
+	font-size: 35px;
+}
+
+.money {
+	float: right;
+}
+.money::before {
+	content: '$ ';
+}
+
+.icon.icon-bin {
+	float: right;
+	cursor: pointer;
+}
