@@ -38,6 +38,31 @@ $(document).ready(function (){
 		loadCosts();
 	});
 
+	$( "body" ).delegate( ".pencil", "click", function() {
+	 var line = $(this).data('index'),
+	 		 parentTable = $(this).closest('table');
+		var cost = trip.costs[line];
+		$('#costLine').val(line);
+		$('#dateCostsUpd').val(cost.date);
+		$('#placeOfCostsUpd').val(cost.place);
+		$('#categoriesOfCostsUpd').val(cost.category);
+		$('#valueOfCostsUpd').val(cost.value);
+		$('#paymentOfCostsUpd').val(cost.payment);
+		$('#categoriesOfCostsUpd').empty();
+		trip.categories.forEach(function (c) {
+			$('#categoriesOfCostsUpd').append('<option>' + c + '</option>');
+		});
+		$('#categoriesOfCostsUpd').append('<option>' + 'unknown' + '</option>');
+		var wWidth = $(window).width(),
+				dWidth = wWidth * 0.6,
+				wHeight = $(window).height(),
+				dHeight = wHeight * 0.5;
+		$('#updateCosts').dialog({
+			width: dWidth,
+			height: dHeight
+		});
+	});
+
 	$('#firstMenu #newTrip').click(function () {
 		$('#firstMenu').hide(function () {
 			$('#bt-menu').fadeIn('slow');
@@ -112,6 +137,18 @@ $(document).ready(function (){
 		cost.payment = $('#paymentOfCosts').val();
 		trip.costs.push(cost);
 		$('#addCosts').dialog('close');
+		loadCosts();
+	});
+
+	$('#updateCost').click(function () {
+		var cost = {};
+		cost.date = $('#dateCostsUpd').val();
+		cost.place = $('#placeOfCostsUpd').val();
+		cost.category = $('#categoriesOfCostsUpd').val() || "unknown";
+		cost.value = $('#valueOfCostsUpd').val();
+		cost.payment = $('#paymentOfCostsUpd').val();
+		trip.costs[$('#costLine').val()] = cost;
+		$('#updateCosts').dialog('close');
 		loadCosts();
 	});
 
@@ -213,7 +250,7 @@ function loadCosts() {
 		tr.append('<td>' + c.category + '</td>');
 		tr.append('<td>' + c.payment + '</td>');
 		tr.append('<td><span class="money">' + parseFloat(c.value).toFixed(2) + '</span></td>');
-		tr.append('<td><span data-index="'+ index +'" class="bin icon icon-bin"></span></td>');
+		tr.append('<td style="text-align: center;"><span data-index="'+ index +'" class="pencil icon icon-pencil"></span><span data-index="'+ index +'" class="bin icon icon-bin"></span></td>');
 		tbody.append(tr);
 	});
 	if (tbody.find('tr').length) {
