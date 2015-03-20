@@ -116,7 +116,7 @@ hr {
 	content: '$ ';
 }
 
-.icon.icon-bin {
-	float: right;
+.icon.icon-bin, .pencil{
 	cursor: pointer;
+	padding-left: 15px;
 }

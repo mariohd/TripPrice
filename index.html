@@ -61,10 +61,10 @@
 				</div>
 			</section>
 			<nav id="bt-menu" class="bt-menu" style="display: none;">
-				<a href="#" id="bt-menu-trigger" class="bt-menu-trigger"><span>Menu</span></a>
+				<a href="javascript:void(0);" id="bt-menu-trigger" class="bt-menu-trigger"><span>Menu</span></a>
 				<ul>
 					<li>
-						<a id="categories" href="#" class="bt-icon">Categories</a>
+						<a id="categories" href="javascript:void(0);" class="bt-icon">Categories</a>
 						<div id="categoriesList" class="hide" title="Categories">
 							<div class="new">
 								<span>Name:</span>
@@ -83,7 +83,7 @@
 						</div>
 					</li>
 					<li>
-						<a id="costs" href="#" class="bt-icon">Costs</a>
+						<a id="costs" href="javascript:void(0);" class="bt-icon">Costs</a>
 						<div id="addCosts" title="Costs" class="hide">
 							<table class="fullLine">
 								<tr>
@@ -117,7 +117,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="#" id="tripConfigIcon" class="bt-icon">Trip</a>
+						<a href="javascript:void(0);" id="tripConfigIcon" class="bt-icon">Trip</a>
 						<div id="tripConfig" title="Trip" class="hide">
 							<table class="fullLine">
 								<tr>
@@ -140,9 +140,40 @@
 							</table>
 						</div>
 					</li>
-					<li><a id="saveTrip" href="#" class="bt-icon">Save</a></li>
+					<li><a id="saveTrip" href="javascript:void(0);" class="bt-icon">Save</a></li>
 				</ul>
 			</nav>
+			<div id="updateCosts" title="Costs" class="hide">
+				<table class="fullLine">
+					<tr>
+						<td><span>Date: </span></td>
+						<td><input class="fullLine date" type="text" id="dateCostsUpd"><input type="hidden" id="costLine"/></td>
+						<td><span>Value: </span></td>
+						<td><input class="fullLine" type="number" id="valueOfCostsUpd"></td>
+					</tr>
+					<tr>
+						<td><span>Place: </span></td>
+						<td colspan="3"><input class="fullLine" type="text" id="placeOfCostsUpd"></td>
+					</tr>
+					<tr>
+						<td><span>Categorie: </span></td>
+						<td colspan="3"><select class="fullLine" id="categoriesOfCostsUpd"></select></td>
+					</tr>
+					<tr>
+						<td><span>Payment: </span></td>
+						<td colspan="3">
+							<select class="fullLine" id="paymentOfCostsUpd">
+								<option value="Credit Card">Credit Card </option>
+								<option value="Cash">Cash </option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4"><span id="updateCost" class="fullLine inline buttonLike icon icon-floppy-disk" > Save </span></td>
+					</tr>
+				</table>
+
+			</div>
 		</div><!-- /container -->
 	</body>
 	<script src="js/classie.js"></script>
